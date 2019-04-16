@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var stopWatchTimer = Timer()
-    var currentTime = 0
+    var currentTime = 1500
     
     // IBOulets
     
@@ -21,9 +21,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
-    @IBOutlet weak var stopButton: UIButton!
-    
     @IBOutlet weak var pauseButton: UIButton!
+    
+    @IBOutlet weak var stopButton: UIButton!
     
     
     
@@ -36,18 +36,19 @@ class ViewController: UIViewController {
         
         // Timer has started, 'Start' button is not needed but 'Pause' is
         pauseButton.isHidden = false
+        
         pauseButton.isEnabled = true
         
         // 'Stop' button is needed
         stopButton.isEnabled = true
         
-        stopWatchTimer = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(ViewController.updateTime), userInfo: nil, repeats: true)
+        stopWatchTimer = Timer.scheduledTimer(timeInterval: 0.00025, target: self, selector: #selector(ViewController.updateTime), userInfo: nil, repeats: true)
     }
     
     @IBAction func pressedPauseButton(_ sender: UIButton) {
         print("pressedPauseButton(): working")
         
-        // TImer is paused, show 'Start' button
+        // Timer is paused, show 'Start' button
         startButton.isHidden = false
         startButton.isEnabled = true
         
@@ -68,11 +69,11 @@ class ViewController: UIViewController {
         stopButton.isEnabled = false
         
         stopWatchTimer.invalidate()
-        currentTime = 0
+        currentTime = 1500
     }
     
     @objc func updateTime() {
-        currentTime += 1
+        currentTime -= 1
         if currentTime % 60 < 10 {
             secondsLabel.text = "0\(currentTime % 60)"
         } else {
@@ -84,7 +85,7 @@ class ViewController: UIViewController {
         } else {
             minutesLabel.text = "\(currentTime / 60)"
         }
-        if currentTime == 1500 {
+        if currentTime == 0 {
             stopWatchTimer.invalidate()
         }
     }

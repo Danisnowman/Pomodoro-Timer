@@ -98,10 +98,10 @@
                     </view>
                     <connections>
                         <outlet property="minutesLabel" destination="th9-kd-iWZ" id="E0c-pK-ols"/>
-                        <outlet property="pauseButton" destination="cBe-Vk-tXc" id="3OE-Ju-sen"/>
+                        <outlet property="pauseButton" destination="cBe-Vk-tXc" id="Mnb-r2-t7y"/>
                         <outlet property="secondsLabel" destination="2oC-Gg-lJU" id="dFg-el-0yc"/>
                         <outlet property="startButton" destination="K3t-Fu-bIZ" id="gCg-Kd-Fpn"/>
-                        <outlet property="stopButton" destination="fzy-O4-PjS" id="DT4-p0-Jhp"/>
+                        <outlet property="stopButton" destination="fzy-O4-PjS" id="vL4-li-dCk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
