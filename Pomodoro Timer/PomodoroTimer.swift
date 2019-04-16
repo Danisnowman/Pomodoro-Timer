@@ -10,6 +10,8 @@ import Foundation
 
 class PomodoroTimer {
     
+    private(set) var buttonOnTimer = [Button]()
+    
     
 
 }

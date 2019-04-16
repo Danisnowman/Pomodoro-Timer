@@ -30,24 +30,40 @@ class ViewController: UIViewController {
     // IBActions
     
     @IBAction func pressedStartButton(_ sender: UIButton) {
+        // Timer has started, 'Start' button can disappear as it's not needed for now
         startButton.isHidden = true
+        startButton.isEnabled = false
+        
+        // Timer has started, 'Start' button is not needed but 'Pause' is
         pauseButton.isHidden = false
+        pauseButton.isEnabled = true
+        
+        // 'Stop' button is needed
         stopButton.isEnabled = true
         
         stopWatchTimer = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(ViewController.updateTime), userInfo: nil, repeats: true)
     }
     
     @IBAction func pressedPauseButton(_ sender: UIButton) {
+        print("pressedPauseButton(): working")
+        
+        // TImer is paused, show 'Start' button
         startButton.isHidden = false
+        startButton.isEnabled = true
+        
+        // 'Pause' button is not needed as start is shown now
         pauseButton.isHidden = true
         
-        // Pausing Timer
-        stopWatchTimer.invalidate() // Pauses the Timer
+        
+        //stopButton.isEnabled = false
+        
+        stopWatchTimer.invalidate()
         
     }
     
     @IBAction func pressedStopButton(_ sender: UIButton) {
         startButton.isHidden = false
+        startButton.isEnabled = true
         pauseButton.isHidden = true
         stopButton.isEnabled = false
         
