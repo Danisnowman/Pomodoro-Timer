@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var stopWatchTimer = Timer()
     var currentTime = 1500
+    var pomodoros = 0
     
     // IBOulets
     
@@ -25,51 +26,34 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var stopButton: UIButton!
     
+    @IBOutlet weak var swipeLabel: UILabel!
     
+    @IBOutlet weak var plusFiveSeconds: UIButton!
     
     // IBActions
     
     @IBAction func pressedStartButton(_ sender: UIButton) {
-        // Timer has started, 'Start' button can disappear as it's not needed for now
-        startButton.isHidden = true
         startButton.isEnabled = false
-        
-        // Timer has started, 'Start' button is not needed but 'Pause' is
-        pauseButton.isHidden = false
-        
-        pauseButton.isEnabled = true
-        
-        // 'Stop' button is needed
         stopButton.isEnabled = true
         
-        stopWatchTimer = Timer.scheduledTimer(timeInterval: 0.00025, target: self, selector: #selector(ViewController.updateTime), userInfo: nil, repeats: true)
+        stopWatchTimer = Timer.scheduledTimer(timeInterval: 0.0000025, target: self, selector: #selector(ViewController.updateTime), userInfo: nil, repeats: true)
     }
     
-    @IBAction func pressedPauseButton(_ sender: UIButton) {
-        print("pressedPauseButton(): working")
-        
-        // Timer is paused, show 'Start' button
-        startButton.isHidden = false
-        startButton.isEnabled = true
-        
-        // 'Pause' button is not needed as start is shown now
-        pauseButton.isHidden = true
-        
-        
-        //stopButton.isEnabled = false
-        
-        stopWatchTimer.invalidate()
-        
+    @IBAction func plusFiveMinutes(_ sender: UIButton) {
+        if currentTime < 1200 {
+         currentTime += 300
+        }
     }
+
     
     @IBAction func pressedStopButton(_ sender: UIButton) {
         startButton.isHidden = false
         startButton.isEnabled = true
-        pauseButton.isHidden = true
         stopButton.isEnabled = false
         
         stopWatchTimer.invalidate()
         currentTime = 1500
+        
     }
     
     @objc func updateTime() {
@@ -87,17 +71,20 @@ class ViewController: UIViewController {
         }
         if currentTime == 0 {
             stopWatchTimer.invalidate()
+            stopButton.isEnabled = false
+            pomodoros += 1
         }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        pauseButton.isHidden = true
+        
+//        pauseButton.isHidden = true
         stopButton.isEnabled = false
+        
     }
-
-
+    
+    
 }
 
