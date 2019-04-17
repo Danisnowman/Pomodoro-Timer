@@ -16,6 +16,12 @@
 		0357B0C62265360200E1F99E /* Pomodoro_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357B0C52265360200E1F99E /* Pomodoro_TimerUITests.swift */; };
 		038DFD5622664E610041A44E /* PomodoroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038DFD5522664E610041A44E /* PomodoroTimer.swift */; };
 		038DFD5722664E610041A44E /* PomodoroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038DFD5522664E610041A44E /* PomodoroTimer.swift */; };
+		0392F14D22679D3B00DDA8B9 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0392F14C22679D3B00DDA8B9 /* TasksViewController.swift */; };
+		0392F14E22679D3B00DDA8B9 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0392F14C22679D3B00DDA8B9 /* TasksViewController.swift */; };
+		0392F15022679D9F00DDA8B9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0392F14F22679D9F00DDA8B9 /* Task.swift */; };
+		0392F15122679D9F00DDA8B9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0392F14F22679D9F00DDA8B9 /* Task.swift */; };
+		0392F15322679E4000DDA8B9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0392F15222679E4000DDA8B9 /* SampleData.swift */; };
+		0392F15422679E4000DDA8B9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0392F15222679E4000DDA8B9 /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,9 @@
 		0357B0C52265360200E1F99E /* Pomodoro_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomodoro_TimerUITests.swift; sourceTree = "<group>"; };
 		0357B0C72265360200E1F99E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		038DFD5522664E610041A44E /* PomodoroTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimer.swift; sourceTree = "<group>"; };
+		0392F14C22679D3B00DDA8B9 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		0392F14F22679D9F00DDA8B9 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		0392F15222679E4000DDA8B9 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +109,13 @@
 		0357B0A42265360200E1F99E /* Pomodoro Timer */ = {
 			isa = PBXGroup;
 			children = (
+				0392F14F22679D9F00DDA8B9 /* Task.swift */,
+				0392F15222679E4000DDA8B9 /* SampleData.swift */,
 				0357B0A52265360200E1F99E /* AppDelegate.swift */,
 				0357B0A72265360200E1F99E /* ViewController.swift */,
 				038DFD5522664E610041A44E /* PomodoroTimer.swift */,
 				0357B0A92265360200E1F99E /* Main.storyboard */,
+				0392F14C22679D3B00DDA8B9 /* TasksViewController.swift */,
 				0357B0AC2265360200E1F99E /* Assets.xcassets */,
 				0357B0AE2265360200E1F99E /* LaunchScreen.storyboard */,
 				0357B0B12265360200E1F99E /* Info.plist */,
@@ -261,7 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				038DFD5622664E610041A44E /* PomodoroTimer.swift in Sources */,
+				0392F15322679E4000DDA8B9 /* SampleData.swift in Sources */,
 				0357B0A82265360200E1F99E /* ViewController.swift in Sources */,
+				0392F15022679D9F00DDA8B9 /* Task.swift in Sources */,
+				0392F14D22679D3B00DDA8B9 /* TasksViewController.swift in Sources */,
 				0357B0A62265360200E1F99E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0392F15122679D9F00DDA8B9 /* Task.swift in Sources */,
+				0392F14E22679D3B00DDA8B9 /* TasksViewController.swift in Sources */,
 				038DFD5722664E610041A44E /* PomodoroTimer.swift in Sources */,
+				0392F15422679E4000DDA8B9 /* SampleData.swift in Sources */,
 				0357B0BB2265360200E1F99E /* Pomodoro_TimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
