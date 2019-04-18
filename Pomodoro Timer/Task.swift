@@ -12,6 +12,6 @@ struct Task {
     
     // MARK: - Properties
     var name: String?
-    var priority: Int
+    var objective: String?
     var difficulty: Int
 }

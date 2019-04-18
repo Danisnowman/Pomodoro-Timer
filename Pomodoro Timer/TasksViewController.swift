@@ -14,6 +14,29 @@ class TasksViewController: UITableViewController {
     var tasks = SampleData.generatePlayersData()
 }
 
+// MARK: - IBActions
+extension TasksViewController {
+    
+    @IBAction func cancelToTasksViewController(_ segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func saveTaskDetail(_ segue: UIStoryboardSegue) {
+        
+        guard let taskDetailsViewController = segue.source as? TaskDetailsViewController,
+            let task = taskDetailsViewController.task else {
+                return
+        }
+        
+        // add the new player to the players array
+        tasks.append(task)
+        
+        // update the tableView
+        let indexPath = IndexPath(row: tasks.count - 1, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
+    
+}
+
 // MARK: - UITableViewDataSource
 extension TasksViewController {
     
@@ -23,11 +46,11 @@ extension TasksViewController {
     
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell",
+                                                 for: indexPath) as! TaskCell
         
         let task = tasks[indexPath.row]
-        cell.textLabel?.text = task.name
-        cell.detailTextLabel?.text =  String(task.priority)
+        cell.task = task
         return cell
     }
 }
