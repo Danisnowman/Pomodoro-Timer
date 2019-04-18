@@ -19,8 +19,17 @@ class TaskDetailsViewController: UITableViewController {
         }
     }
     
+    var stars: String = "1" {
+        didSet {
+            
+            starLabel.text = String(stars)
+        }
+    }
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var starLabel: UILabel!
+    @IBOutlet weak var starTextField: UITextField!
     
     // MARK: - Initializers
     required init?(coder aDecoder: NSCoder) {
@@ -35,8 +44,8 @@ class TaskDetailsViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SaveTaskDetail",
-            let taskName = nameTextField.text {
-            task = Task(name: taskName, objective: objective, difficulty: 1)
+            let taskName = nameTextField.text, let difficultyStar = starTextField.text {
+            task = Task(name: taskName, objective: objective, difficulty: Int(difficultyStar) ?? 1)
         }
         if segue.identifier == "PickObjective",
             let objectivePickerViewController = segue.destination as? ObjectivePickerViewController {
@@ -71,3 +80,14 @@ extension TaskDetailsViewController {
         }
     }
 }
+
+//// MARK: - IBActions
+//extension TaskDetailsViewController {
+//
+//    @IBAction func unwindWithSelectedStar(segue: UIStoryboardSegue) {
+//        if let starsPickerViewController = segue.source as? StarsPickerTableViewController,
+//            let selectedStar = starsPickerViewController.selectedStar {
+//            stars = selectedStar
+//        }
+//    }
+//}

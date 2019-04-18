@@ -30,6 +30,10 @@
 		0392F15D2267F45000DDA8B9 /* ObjectivePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0392F15B2267F45000DDA8B9 /* ObjectivePickerViewController.swift */; };
 		0392F1602267FA9A00DDA8B9 /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0392F15E2267FA9A00DDA8B9 /* Tasks.storyboard */; };
 		0392F1612267FA9A00DDA8B9 /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0392F15E2267FA9A00DDA8B9 /* Tasks.storyboard */; };
+		03A41EEA2268FEE000F86F0A /* StarsPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A41EE92268FEE000F86F0A /* StarsPickerTableViewController.swift */; };
+		03A41EEB2268FEE000F86F0A /* StarsPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A41EE92268FEE000F86F0A /* StarsPickerTableViewController.swift */; };
+		03A41EED2269360000F86F0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03A41EEC2269360000F86F0A /* README.md */; };
+		03A41EEE2269360000F86F0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03A41EEC2269360000F86F0A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,8 @@
 		0392F1582267D24400DDA8B9 /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
 		0392F15B2267F45000DDA8B9 /* ObjectivePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectivePickerViewController.swift; sourceTree = "<group>"; };
 		0392F15F2267FA9A00DDA8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Pomodoro Timer/Base.lproj/Tasks.storyboard"; sourceTree = "<group>"; };
+		03A41EE92268FEE000F86F0A /* StarsPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsPickerTableViewController.swift; sourceTree = "<group>"; };
+		03A41EEC2269360000F86F0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +129,9 @@
 			children = (
 				0357B0A92265360200E1F99E /* Main.storyboard */,
 				0392F15E2267FA9A00DDA8B9 /* Tasks.storyboard */,
+				03A41EEC2269360000F86F0A /* README.md */,
 				0392F15B2267F45000DDA8B9 /* ObjectivePickerViewController.swift */,
+				03A41EE92268FEE000F86F0A /* StarsPickerTableViewController.swift */,
 				0357B0AE2265360200E1F99E /* LaunchScreen.storyboard */,
 				0392F14F22679D9F00DDA8B9 /* Task.swift */,
 				0392F15222679E4000DDA8B9 /* SampleData.swift */,
@@ -263,6 +271,7 @@
 			files = (
 				0357B0B02265360200E1F99E /* LaunchScreen.storyboard in Resources */,
 				0392F1602267FA9A00DDA8B9 /* Tasks.storyboard in Resources */,
+				03A41EED2269360000F86F0A /* README.md in Resources */,
 				0357B0AD2265360200E1F99E /* Assets.xcassets in Resources */,
 				0357B0AB2265360200E1F99E /* Main.storyboard in Resources */,
 			);
@@ -272,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A41EEE2269360000F86F0A /* README.md in Resources */,
 				0392F1612267FA9A00DDA8B9 /* Tasks.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +305,7 @@
 				0392F1592267D24400DDA8B9 /* TaskDetailsViewController.swift in Sources */,
 				0392F15322679E4000DDA8B9 /* SampleData.swift in Sources */,
 				0357B0A82265360200E1F99E /* ViewController.swift in Sources */,
+				03A41EEA2268FEE000F86F0A /* StarsPickerTableViewController.swift in Sources */,
 				0392F15022679D9F00DDA8B9 /* Task.swift in Sources */,
 				0392F15C2267F45000DDA8B9 /* ObjectivePickerViewController.swift in Sources */,
 				0392F14D22679D3B00DDA8B9 /* TasksViewController.swift in Sources */,
@@ -309,6 +320,7 @@
 				0392F15A2267D24400DDA8B9 /* TaskDetailsViewController.swift in Sources */,
 				0392F15122679D9F00DDA8B9 /* Task.swift in Sources */,
 				0392F14E22679D3B00DDA8B9 /* TasksViewController.swift in Sources */,
+				03A41EEB2268FEE000F86F0A /* StarsPickerTableViewController.swift in Sources */,
 				038DFD5722664E610041A44E /* PomodoroTimer.swift in Sources */,
 				0392F15422679E4000DDA8B9 /* SampleData.swift in Sources */,
 				0392F1572267B4C600DDA8B9 /* TaskCell.swift in Sources */,
