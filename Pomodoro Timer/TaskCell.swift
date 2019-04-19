@@ -27,7 +27,12 @@ class TaskCell: UITableViewCell {
     }
     
     func image(forDifficulty difficulty: Int) -> UIImage? {
-        let imageName = "\(difficulty)Stars"
+        var imageName = "\(difficulty)Stars"
+        if difficulty <= 0 {
+            imageName = "1Stars"
+        } else if difficulty > 5 {
+            imageName = "5Stars"
+        }
         return UIImage(named: imageName)
     }
     

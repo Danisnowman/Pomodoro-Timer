@@ -13,7 +13,7 @@ class TaskDetailsViewController: UITableViewController {
     // MARK: - Properties
     var task: Task?
     
-    var objective: String = "Chess" {
+    var objective: String = "Cálculo Multivariable" {
         didSet {
             detailLabel.text = objective
         }
