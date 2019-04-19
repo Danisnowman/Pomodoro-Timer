@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0357B0A62265360200E1F99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357B0A52265360200E1F99E /* AppDelegate.swift */; };
-		0357B0A82265360200E1F99E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357B0A72265360200E1F99E /* ViewController.swift */; };
+		0357B0A82265360200E1F99E /* MainTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357B0A72265360200E1F99E /* MainTimerViewController.swift */; };
 		0357B0AB2265360200E1F99E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0357B0A92265360200E1F99E /* Main.storyboard */; };
 		0357B0AD2265360200E1F99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0357B0AC2265360200E1F99E /* Assets.xcassets */; };
 		0357B0B02265360200E1F99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0357B0AE2265360200E1F99E /* LaunchScreen.storyboard */; };
@@ -56,7 +56,7 @@
 /* Begin PBXFileReference section */
 		0357B0A22265360200E1F99E /* Pomodoro Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pomodoro Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0357B0A52265360200E1F99E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0357B0A72265360200E1F99E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0357B0A72265360200E1F99E /* MainTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTimerViewController.swift; sourceTree = "<group>"; };
 		0357B0AA2265360200E1F99E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0357B0AC2265360200E1F99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0357B0AF2265360200E1F99E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 				0357B0A52265360200E1F99E /* AppDelegate.swift */,
 				038DFD5522664E610041A44E /* PomodoroTimer.swift */,
 				0392F1552267B4C600DDA8B9 /* TaskCell.swift */,
-				0357B0A72265360200E1F99E /* ViewController.swift */,
+				0357B0A72265360200E1F99E /* MainTimerViewController.swift */,
 				0392F14C22679D3B00DDA8B9 /* TasksViewController.swift */,
 				0392F1582267D24400DDA8B9 /* TaskDetailsViewController.swift */,
 				0357B0AC2265360200E1F99E /* Assets.xcassets */,
@@ -304,7 +304,7 @@
 				0392F1562267B4C600DDA8B9 /* TaskCell.swift in Sources */,
 				0392F1592267D24400DDA8B9 /* TaskDetailsViewController.swift in Sources */,
 				0392F15322679E4000DDA8B9 /* SampleData.swift in Sources */,
-				0357B0A82265360200E1F99E /* ViewController.swift in Sources */,
+				0357B0A82265360200E1F99E /* MainTimerViewController.swift in Sources */,
 				03A41EEA2268FEE000F86F0A /* StarsPickerTableViewController.swift in Sources */,
 				0392F15022679D9F00DDA8B9 /* Task.swift in Sources */,
 				0392F15C2267F45000DDA8B9 /* ObjectivePickerViewController.swift in Sources */,

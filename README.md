@@ -10,8 +10,12 @@ The app has the main Timer which works exactly as explained above and also has t
 * ~~Redesign~~ 
 * ~~Refactor Storyboard~~ 
 * ~~Enable the user to change task difficulty with stars rating system~~
-* Implement 5 minutes Recess on Timer
+* ~~Implement 5 minutes Recess on Timer~~
+* ~~Implement *Long Recess* after 4 Pomodori~~
 * Add checkbox (or equivalent gesture) to tasks to mark as *Done*
 * Enable the user to add Objectives
 * Remove hardcoded data from objectives
 * Remove hardcoded data from tasks
+
+### Note:
+Given this app is in test mode, which means that the current timer goes super fast. You can change it in *MainTimerViewController.swift*.
