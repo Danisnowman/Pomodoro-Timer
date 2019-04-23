@@ -12,9 +12,18 @@ final class SampleData {
     
     static func generateTaskDataSamples() -> [Task] {
         return [
-            Task(name: "Terminar Estructura", objective: "Estructuras de Datos", difficulty: 5),
-            Task(name: "Leer Micro", objective: "Microeconomía", difficulty: 2),
-            Task(name: "Estudiar Costos", objective: "Cost Analysis", difficulty: 3)
+            Task(name: "Terminar Estructura",
+                 objective: "Estructuras de Datos",
+                 difficulty: 5
+            ),
+            Task(name: "Leer Micro",
+                 objective: "Microeconomía",
+                 difficulty: 2
+            ),
+            Task(name: "Estudiar Costos",
+                 objective: "Cost Analysis",
+                 difficulty: 3
+            )
         ]
     }
 }
