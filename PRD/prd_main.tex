@@ -1,0 +1,118 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{enumerate}
+\usepackage{ulem}
+\title{\textbf{Pomodoro}}
+\author{Daniel E. Hernández}
+\date{\the\year-\ifnum\month<10\relax0\fi\the\month-\ifnum\day<10\relax0\fi\the\day}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Este proyecto busca incrementar la productividad de los usuarios por medio del uso de la \textit{Técnica Pomodoro}. Dicha técnica se ve plasmada en la función principal de una aplicación. Dicha función es un temporizador de 25 minutos y una función secundaria es poder romper en \textit{tasks} las ideas del usuario y lo que él necesite hacer. 
+\end{abstract}
+
+\section{Descripción General}
+\subsection{Problema}
+\begin{enumerate}
+	\item \textbf{Al tener una tarea grande, es difícil subdividir:} Al momento de tener una tarea principal en mano, muchas veces es difícil lograr realizarla en el tiempo indicado dado que no se tiene una idea específica de cada sub-tarea o \textit{task} de qué hacer sino solo una idea abstracta general.
+	
+	\item \textbf{Tener muchas tareas dificulta la segmentación de tiempo:} Al momento de tener muchas tareas principales y un tiempo limitado, muchas veces es difícil segmentar dichas tareas en rangos de tiempo. Por ende, es difícil lograr terminar la tarea principal en el tiempo máximo dado para ella (\textit{o deadline}).
+
+	\item \textbf{Descansos irregulares = menos productividad y más cansancio:} Al no tener rangos de tiempo determinados para poder descasar mientras se está haciendo une tarea principal/sub-tarea resulta que en general se es menos productivo dado que al cansarse, se suele tomar descansos irregulares de amplia cantidad de tiempo.
+\end{enumerate}
+
+\section{Metas}
+\begin{enumerate}
+	\item \textbf{Al tener sub-tareas o \textit{tasks} es más fácil cumplir con ellas:} Se logran cumplir porque se tiene un idea específica de cada objetivo que se quiere lograr en vez de solo tener una visión abstracta general.
+	
+	\item \textbf{Completar la tarea principal o \textit{objective} en \textit{sprints} o \textit{Pomodori (plural de Pomodoro)} pequeños:} Se logra cumplir el \textit{objective} abstracto y general por medio de sprints donde el usuario eligió los tasks que quiere completar en el mismo. Cada Pomodoro es de 25 minutos según lo recomendado por la \textit{Técnica Pomodoro}.
+	
+	\item \textbf{Descansos de un intervalo de tiempo establecido o \textit{Recess}:} Al final de cada Pomodoro el usuario descansa por 5 minutos o más según él elija, y al terminar su tiempo de descanso, inicia otro Pomodoro. Al lograr esto maximiza su productividad porque hay un descanso efectivo y no son lapsos de descanso demasiado grandes interrumpiendo el \textit{train of thought} o el proceso productivo.
+\end{enumerate}
+
+\section{Fuera del enfoque}
+\begin{enumerate}
+	\item \textbf{GUI y UX intuitivo:} Tener una interfaz gráfica intuitiva y autoexplicativa.
+	\item \textbf{GUI según lenguaje de diseño de plataforma:} Seguir el diseño sugerido por Apple para iOS, utilizar \textit{Swift} para que la aplicación corra en el nivel más bajo permitido y recomendado por Apple junto con \textit{Objective-C} en casos sea necesario (i.e. según sea sugerido por la documentación de ciertos métodos de Swift como: \texttt{Timer()} que necesita un \texttt{\#selector} que utiliza una función de Obj.-C)
+	\item 
+\end{enumerate}
+
+\section{Personas y roles:}
+\begin{enumerate}
+	\item \textbf{Daniel Hernández \textit{(dev y ops)}:} Crear el proyecto, desarrollarlo, mantenerlo y publicarlo en el App Store. 
+	\item \textbf{Fernando José Boiton y Juan Luis López \textit{(QA)}:} Revisiones de entrega del proyecto.  
+\end{enumerate}
+\section{Contexto}
+\subsection{Casos de Uso}
+\subsubsection{El usuario quiere:}
+\begin{itemize}
+	\item \textbf{Ser más ordenado}
+	\subitem Quiere organizar sus ideas al ordenarlas en Objectives y Tasks.
+	\item \textbf{Ser más eficiente}
+	\subitem Cumplir con los intervalos de tiempo diseñados por la Técnica Pomodoro.
+	\item \textbf{Descansar y no procrastinar}
+	\subitem Al tener intervalos de tiempo determinados, se evita procrastinar y hay descanso efectivo.
+\end{itemize}
+	
+\section{Propuesta}
+\subsection{Pomodoro App}
+\par Es una aplicación que busca incrementar la productividad y eficiencia del usuario por medio de la \textit{Técnica Pomodoro} al ayudarlo a organizar sus ideas y dividir mejor su tiempo.
+\subsection{User Experience}
+\begin{enumerate}
+	\item \textbf{Timer:} de 25 minutos que cambia a 5 minutos una vez se acabe cada Pomodoro.
+	\begin{enumerate}
+		\item \textbf{Timer:} Inicia siempre con 25 minutos y se van restando minuto por minuto hasta llegar a 0.
+		\begin{enumerate}
+			\item Caso Pomodoro: Inicia con 25 minutos.
+			\item Caso \textit{Recess:} Inicia con 5 minutos.
+			\item Caso \textit{Long Recess:} Inicia con 20 minutos.
+		\end{enumerate}
+		\item \textbf{Botón de \textit{Start}:} Al utilizarse se inicia o el Pomodoro, el \textit{Recess} o el \textit{Long Recess}.
+		\item \textbf{Botón de \textit{Stop}:} Cancela o el Pomodoro, el \textit{Recess} o el \textit{Long Recess}.
+		
+		\item \textbf{Botón de $+5$ minutos:} Al utilizarse le agrega a la actividad actual en el Timer 5 minutos con un límite máximo de 25 minutos (i.e. si el Pomodoro iba por el minuto 20 y presiona el botón de $+5$ minutos, aumentará el Timer a 25 minutos, empero, lo presionara una vez más no agregaría más tiempo puesto que ya se encuentra en el límite máximo de 25 minutos).
+		
+		\item \textbf{Label: \textit{Currently}:} Indica cualquiera de las tres posibles actividades en las que se podría encontrar el usuario: Pomodoro, \textit{Recess} o \textit{Long Recess}.
+		
+		\item \textbf{Label: \textit{Pomodori}:} Indica la cantidad de veces que se ha realizado un Pomodoro, eso es, cada vez que el \textit{Label: Currently} indica que el usuario está dentro de un Pomodoro y el Timer se resta desde 25 minutos hasta 0, el \textit{Label: Pomodori} indica la cantidad que ya tenía $+1$.
+		
+		\item \textbf{Label: \textit{Sessions}} Luego de completar 5 \textit{Pomodori}, se completa una sesión y el label muestra la cantidad que ya tenía de sesiones $+1$.
+	\end{enumerate}
+	\item \textbf{Task Managment:}
+	\begin{enumerate}
+		\item \textbf{Screen: \textit{All Tasks}} Donde cada task tiene su propia celda y la celda tiene sus atributos:
+		\begin{enumerate}
+			\item \textbf{Task Name} Indica el nombre específico del task en la celda.
+			\item \textbf{Task Rating o Difficulty} Indica qué tan difícil es de realizar ese task o la prioridad según la cantidad de estrellas que el usuario elija. La interpretación de qué significan las estrellas varía según el usuario pero las dos definiciones propuestas son: Difficultad o Prioridad. 
+			\item \textbf{Objective} Indica a qué \textit{objective} pertenece, eso es, a qué task abstracto o general pertenece este task que es específico.
+		\end{enumerate}
+		\item \textbf{Screen \textit{Add Task}} Donde el usuario puede ingresar los datos específicos del task y si los deja en blanco (gracias a el uso de \textit{Optinals} en \textit{Swift}) toman un setting o dato \textit{default}. Contiene los siguientes campos para ingresar dichos datos que luego serán utilizados por el screen \textit{All Tasks}.
+		\begin{enumerate}
+			\item \textbf{Botón de \textit{Cancel}}: Inicializa un \textit{segue} para regresar al screen: \textit{All Tasks} sin guardar los cambios efectuados.
+			\item \textbf{Botón de \textit{Done}}: Inicializa un \textit{segue} para regresar al screen: \textit{All Tasks} guardando los cambios efectuados.
+			\item \textbf{Text Field: TaskName} Donde el usuario ingresa el nombre de su task.
+			\item \textbf{Detail View: Objective Name} Al seleccionarlo se inciia un \textit{segue} a la siguiente screen de \textit{Choose Objective} donde el usuario elige el \textit{Objective} de su task.
+			\item \textbf{Text Field: Difficulty} El usuario ingresa un número recomendado entre $1 - 5$ que definirá la cantidad de estrellas asignadas a ese task específico. Si el número fuera $\leq 0$ entonces la cantidad asignada es 1 estrella y si fuera $\geq 5$ la cantidad asignada es 5 estrellas. 
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+\subsection{Trabajo a futuro:}
+\begin{enumerate}
+	\item \sout{\textbf{Mejor diseño:} Diseñar mockups de la interfaz gráfica.}
+	\item \sout{\textbf{iOS App:} Desarrollar la primera versión de la aplicación.}
+	\item \textbf{Pruebas de usuario:} Realizarlas para asegurar el uso intuitivo de la aplicación y corregir cualquier falla.
+	\item \textbf{Mark as done:} Add checkbox (or equivalent gesture) to tasks tobe able to mark them as Done.
+	\item \textbf{Add Objectives:} Enable the user to add Objectives.
+	\item \textbf{Sample Data:} Eliminar el sample data para tener la aplicación limpia para la personalización del usuario.
+
+\end{enumerate}
+\section{Tasks y Deadilines}
+\begin{enumerate}
+	\item \textbf{PRD:} 2019-02-28
+	\item \textbf{MVP:} 2019-04-23
+\end{enumerate}
+\end{document}
