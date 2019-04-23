@@ -10,7 +10,7 @@ import Foundation
 
 final class SampleData {
     
-    static func generatePlayersData() -> [Task] {
+    static func generateTaskDataSamples() -> [Task] {
         return [
             Task(name: "Terminar Estructura", objective: "Estructuras de Datos", difficulty: 5),
             Task(name: "Leer Micro", objective: "Microeconomía", difficulty: 2),

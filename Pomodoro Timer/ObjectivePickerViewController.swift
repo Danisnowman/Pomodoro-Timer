@@ -25,7 +25,7 @@ class ObjectivePickerViewController: UITableViewController {
     ]
     
     var selectedObjective: String? {
-        didSet {
+        didSet { // Shadow Unwrapping (if let a = a)
             if let selectedObjective = selectedObjective,
                 let index = objectives.firstIndex(of: selectedObjective) {
                 selectedObjectiveIndex = index

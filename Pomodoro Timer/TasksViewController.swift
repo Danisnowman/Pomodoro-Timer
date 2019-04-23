@@ -11,7 +11,7 @@ import UIKit
 class TasksViewController: UITableViewController {
     
     // MARK: - Properties
-    var tasks = SampleData.generatePlayersData()
+    var tasks = SampleData.generateTaskDataSamples()
 }
 
 // MARK: - IBActions
