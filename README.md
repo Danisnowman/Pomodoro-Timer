@@ -14,6 +14,7 @@ The app has the main Timer which works exactly as explained above and also has t
 * ~~Implement *Long Recess* after 4 Pomodori~~
 * Add checkbox (or equivalent gesture) to tasks to mark as *Done*
 * Enable the user to add Objectives
+* Add tree to make a relationship between Tasks and Pomodoro (how many tasks were completed in 25 minutes)
 * Remove hardcoded data from objectives
 * Remove hardcoded data from tasks
 
