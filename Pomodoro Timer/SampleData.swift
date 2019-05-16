@@ -16,13 +16,21 @@ final class SampleData {
                  objective: "Estructuras de Datos",
                  difficulty: 5
             ),
+            Task(name: "Estudiar Micro",
+                 objective: "Microeconomía",
+                 difficulty: 4
+            ),
             Task(name: "Leer Micro",
                  objective: "Microeconomía",
-                 difficulty: 2
+                 difficulty: 3
             ),
             Task(name: "Estudiar Costos",
                  objective: "Cost Analysis",
-                 difficulty: 3
+                 difficulty: 2
+            ),
+            Task(name: "Repasar Estadística",
+                 objective: "Statistical Thinking I",
+                 difficulty: 2
             )
         ]
     }

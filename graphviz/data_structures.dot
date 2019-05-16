@@ -1,0 +1,54 @@
+digraph g {
+    graph [
+    rankdir = "TB"
+    splines=line
+    dpi = 450
+    ];
+     node [shape=plaintext, fontcolor=black, fontsize=18];
+    "Indices:" -> "Values:" [color=white];
+    node [
+    fontsize = "16"
+    shape = "record"
+    ];
+    edge [
+    ];
+    "node0" [
+    label = "{<f0> Terminar Estructura | Estructura de Datos | 5 }"
+    ];
+    "node1" [
+    label = "{<f0> Estudiar Micro | Microeconomía | 4 }"
+    ];
+    "node2" [
+    label = "{<f0> Leer Micro | Microeconomía | 3 }"
+    ];
+    "node3" [
+    label = "{<f0> Estudiar Costos | Cost Analysis | 2 }"
+    ];
+    "node4" [
+    label = "{<f0> Repasar Estadística | Statistical Thinking I | 2 }"
+    ];
+
+    labelloc="t";
+    label= <<u>Array of structs</u>>; fontsize=22; 
+
+    "array0" [
+    label = " <f0> Task[0] | <f1> Task[1] | <f2> Task[2] | <f3> Task[3] | <f4> Task[4] "
+    ];
+
+    {rank=same; node0;node1;node2;node3;node4}
+    "array0":f0 -> "node0" [
+    id = 0
+    ];
+    "array0":f1 -> "node1" [
+    id = 1
+    ];
+    "array0":f2 -> "node2" [
+    id = 2
+    ];
+    "array0":f3 -> "node3" [
+    id = 3
+    ];
+    "array0":f4 -> "node4" [
+    id = 4
+    ];
+}
