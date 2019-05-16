@@ -12,11 +12,11 @@ The app has the main Timer which works exactly as explained above and also has t
 * ~~Enable the user to change task difficulty with stars rating system~~
 * ~~Implement 5 minutes Recess on Timer~~
 * ~~Implement *Long Recess* after 4 Pomodori~~
+* Add b-tree to enable users to filter tasks based on difficulty.
 * Add checkbox (or equivalent gesture) to tasks to mark as *Done*
 * Enable the user to add Objectives
-* Add tree to make a relationship between Tasks and Pomodoro (how many tasks were completed in 25 minutes)
-* Remove hardcoded data from objectives
-* Remove hardcoded data from tasks
+* Remove hardcoded data from objectives *(not until demo is over)*
+* Remove hardcoded data from tasks  *(not until demo is over)*
 
 ### Note:
 Given that this app is in test mode, the current timer goes super fast. You can change it in *MainTimerViewController.swift*.
