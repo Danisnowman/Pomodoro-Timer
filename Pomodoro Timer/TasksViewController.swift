@@ -8,10 +8,23 @@
 
 import UIKit
 
+
 class TasksViewController: UITableViewController {
     
     // MARK: - Properties
-    var tasks = SampleData.generateTaskDataSamples()
+    var tasks: [Task] = SampleData.generateTaskDataSamples()
+    
+    var bTree = BTree<Int, Task>(order: 1)!
+ 
+//    func addToTree(){
+//        print("addToTree() works!!")
+//        for task in tasks {
+//            bTree.insert(task, for: task.difficulty)
+//        }
+//
+//    }
+    
+    
 }
 
 // MARK: - IBActions
@@ -27,11 +40,13 @@ extension TasksViewController {
                 return
         }
         
-        // add the new player to the players array
+        // add the new task to the tasks array
         tasks.append(task)
+        bTree.insert(task, for: task.difficulty)
         
         // update the tableView
         let indexPath = IndexPath(row: tasks.count - 1, section: 0)
+//        let indexPath = IndexPath(row: bTree.numberOfKeys, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
     

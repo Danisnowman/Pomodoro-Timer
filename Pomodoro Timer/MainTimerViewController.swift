@@ -173,6 +173,7 @@ class MainTimerViewController: UIViewController {
         updateTimeOnViewController(newTime: 1500 - 1)
         currentlyOnLabel.textColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         
+        
     }
     
     
