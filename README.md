@@ -19,4 +19,4 @@ The app has the main Timer which works exactly as explained above and also has t
 * Remove hardcoded data from tasks
 
 ### Note:
-Given this app is in test mode, which means that the current timer goes super fast. You can change it in *MainTimerViewController.swift*.
+Given that this app is in test mode, the current timer goes super fast. You can change it in *MainTimerViewController.swift*.
