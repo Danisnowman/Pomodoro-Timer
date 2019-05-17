@@ -69,6 +69,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="All Tasks" id="IlO-f7-Igb">
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="Hyl-CV-RI0">
+                            <connections>
+                                <segue destination="8nT-wB-N40" kind="popoverPresentation" popoverAnchorBarButtonItem="Hyl-CV-RI0" id="Mwg-ZX-93B">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SD4-pI-RyF">
                             <connections>
                                 <segue destination="xhn-Q4-Vi2" kind="presentation" id="Weq-cO-Fh1"/>
@@ -196,7 +203,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfA-6X-1NY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="X8o-zg-YBm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4143.4782608695659" y="323.64130434782612"/>
+            <point key="canvasLocation" x="4187" y="765"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CO6-RW-5JV">
@@ -216,6 +223,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWU-lU-PJH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1406" y="325"/>
+        </scene>
+        <!--Filter by Stars-->
+        <scene sceneID="HTH-CQ-aBL">
+            <objects>
+                <tableViewController id="fOY-8V-Hpa" customClass="FilterByStarsViewController" customModule="Pomodoro_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="TtD-wW-bZh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StarsForFilterCell" id="ZCW-2o-eK7" customClass="StarsForFilterCell" customModule="Pomodoro_Timer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZCW-2o-eK7" id="YEm-Mo-qPY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="199" translatesAutoresizingMaskIntoConstraints="NO" id="lkA-F8-v0I">
+                                            <rect key="frame" x="46" y="-4" width="322.33333333333331" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Stars:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4X1-fo-Y6w">
+                                                    <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ntD-NF-xc1">
+                                                    <rect key="frame" x="241.33333333333337" y="0.0" width="81" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="81" id="eXg-wi-Tom"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="starsForFilter" destination="ntD-NF-xc1" id="Gfk-R4-g7i"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fOY-8V-Hpa" id="0tT-SK-Lj9"/>
+                            <outlet property="delegate" destination="fOY-8V-Hpa" id="Nh9-fg-FOH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Filter by Stars" id="lNs-oH-faL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nR3-2R-tGK">
+                            <connections>
+                                <segue destination="hHr-aP-P0b" kind="unwind" unwindAction="cancelToTasksViewController:" id="WZl-Fd-k5N"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="qeH-vX-0iA"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEy-kg-NOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hHr-aP-P0b" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4156.521739130435" y="-94.565217391304358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fsA-30-Luu">
+            <objects>
+                <navigationController id="8nT-wB-N40" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2C7-H9-qCq">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fOY-8V-Hpa" kind="relationship" relationship="rootViewController" id="Gm0-TZ-8a5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtG-PC-0Mp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3238" y="-94"/>
         </scene>
         <!--Choose Objective-->
         <scene sceneID="FTN-mH-bJy">
@@ -302,7 +385,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXd-uF-ZQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3237.68115942029" y="323.64130434782612"/>
+            <point key="canvasLocation" x="3238" y="765"/>
         </scene>
     </scenes>
 </document>

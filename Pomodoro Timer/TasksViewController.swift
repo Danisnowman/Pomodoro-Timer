@@ -16,13 +16,13 @@ class TasksViewController: UITableViewController {
     
     var bTree = BTree<Int, Task>(order: 1)!
  
-//    func addToTree(){
-//        print("addToTree() works!!")
-//        for task in tasks {
-//            bTree.insert(task, for: task.difficulty)
-//        }
-//
-//    }
+    func addToTree(){
+        print("addToTree() works!!")
+        for task in tasks {
+            bTree.insert(task, for: task.difficulty)
+        }
+
+    }
     
     
 }
@@ -42,7 +42,9 @@ extension TasksViewController {
         
         // add the new task to the tasks array
         tasks.append(task)
+        addToTree()
         bTree.insert(task, for: task.difficulty)
+        print(String(bTree.value(for: 2)!.name ?? "no name"))
         
         // update the tableView
         let indexPath = IndexPath(row: tasks.count - 1, section: 0)

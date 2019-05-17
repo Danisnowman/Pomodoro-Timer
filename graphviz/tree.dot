@@ -1,0 +1,53 @@
+digraph g {
+	graph [
+    rankdir = "TB"
+    splines=line
+    dpi = 450
+    ];
+node [shape = record,height=.1,fontsize = "16"];
+
+array0[label = "<f0> 1| <f1> 2| <f2> 3|<f3> 4| <f4> 5"];
+
+    "node1" [
+    label = "{<f0> Terminar Estructura | Estructura de Datos | 5 }"
+    ];
+    "node2" [
+    label = "{<f0> Estudiar Micro | Microeconomía | 4 }"
+    ];
+    "node3" [
+    label = "{<f0> Leer Micro | Microeconomía | 3 }"
+    ];
+    "node4" [
+    label = "{<f0> Estudiar Costos | Cost Analysis | 2 }"
+    ];
+    "node5" [
+    label = "{<f0> Repasar Estadística | Statistical Thinking I | 2 }"
+    ];
+
+    array1[label = "<f0> 2| <f1> 2"];
+    array2[label = "<f0> 3"];
+    array3[label = "<f0> 4"];
+    array4[label = "<f0> 5"];
+
+
+    {rank=same; node1;node2;node3;node4}
+
+    "array0":f4 -> "array4" -> "node1":f0 [
+    id = 0
+    ];
+    "array0":f3 -> "array3" -> "node2":f0 [
+    id = 1
+    ];
+    "array0":f2 -> "array2" -> "node3":f0 [
+    id = 2
+    ];
+    "array0":f1 -> "array1" -> "node4":f0 [
+    id = 3
+    ];
+ 	"array1":f1 -> "node5":f0 [
+    id = 4
+    ];
+
+
+
+}
