@@ -5,7 +5,8 @@ digraph g {
     dpi = 450
     ];
 node [shape = record,height=.1,fontsize = "16"];
-
+labelloc="t";
+    label= <<u>B-Tree where keys = rating</u>>; fontsize=22; 
 array0[label = "<f0> 1| <f1> 2| <f2> 3|<f3> 4| <f4> 5"];
 
     "node1" [

@@ -1,0 +1,45 @@
+digraph g {
+    graph [
+    rankdir = "TB"
+    splines=line
+    dpi = 450
+    ];
+     node [shape=plaintext, fontcolor=black, fontsize=18];
+    "Indices:" -> "Values:" [color=white];
+    node [
+    fontsize = "16"
+    shape = "record"
+    ];
+    
+    "array0" [
+    label = " <f0> objectives[0] | <f1> objectives[1] | <f2> objectives[2] | <f3> objectives[3] | <f4> objectives[4] | <f5> objectives[5]"
+    ];
+
+    "node0" [
+    label = "<f0> Estructuras de Datos | <f1> Cálculo Multivariable | <f2> Statistical Thinking I | <f3> Cost Analysis | <f4> Global Managment | <f5> Introducción a DevOps"
+    ];
+
+    labelloc="t";
+    label= <<u>Array</u>>; fontsize=22; 
+
+    {rank=same; node0;}
+    "array0":f0 -> "node0":f0 [
+    id = 0
+    ];
+    "array0":f1 -> "node0":f1 [
+    id = 1
+    ];
+    "array0":f2 -> "node0":f2 [
+    id = 2
+    ];
+    "array0":f3 -> "node0":f3 [
+    id = 3
+    ];
+    "array0":f4 -> "node0":f4 [
+    id = 4
+    ];
+    "array0":f5 -> "node0":f5 [
+    id = 4
+    ];
+
+}

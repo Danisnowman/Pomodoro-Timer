@@ -1,0 +1,32 @@
+digraph g {
+    graph [
+    rankdir = "TB"
+    splines=line
+    dpi = 450
+    ];
+    node [
+    fontsize = "16"
+    shape = "record"
+    ];
+    edge [
+    ];
+    "node0" [
+    label = "{<f0> Terminar Estructura | Estructura de Datos | 5 }"
+    ];
+    "node1" [
+    label = "{<f0> Estudiar Micro | Microeconomía | 4 }"
+    ];
+    "node2" [
+    label = "{<f0> Leer Micro | Microeconomía | 3 }"
+    ];
+    "node3" [
+    label = "{<f0> Estudiar Costos | Cost Analysis | 2 }"
+    ];
+    "node4" [
+    label = "{<f0> Repasar Estadística | Statistical Thinking I | 2 }"
+    ];
+
+    labelloc="t";
+    label= <<u>Structs</u>>; fontsize=22; 
+
+}
